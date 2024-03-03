@@ -1,0 +1,988 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap')
+
+*
+    box-sizing: border-box
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+
+a
+    text-decoration: none
+
+ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+img
+    max-width: 100%
+    border-style: none
+
+html
+    font-family: 'Golos Text', sans-serif
+    line-height: 1.15
+    -webkit-text-size-adjust: 100%
+    scroll-behavior: smooth
+
+body
+    margin: 0
+
+main
+    display: block
+
+h1
+    font-size: 2em
+    margin: 0.67em 0
+
+.outer
+    max-width: 1366px
+    margin: 0 auto
+
+.inner
+
+    padding-left: 72px
+    padding-right: 72px
+
+.swiper-arrow-hover-disabled
+    &:hover circle
+        fill: #FBCE51
+    &:disabled circle
+        fill: #D6D6D6
+.running
+    &__line-container
+        max-width: 1366px
+        overflow: hidden
+        
+    &__line-box
+        display: flex
+        position: relative
+        overflow: hidden
+        width: 2335px
+        padding-top: 18px 
+        padding-bottom: 18px
+        transform: translateX(-20%)
+        color: #FFFFFF
+        background-color: #F54932
+        &:hover div
+            animation-play-state: paused
+        flex-wrap: nowrap
+
+    &__line-wrapper
+        padding-left: 12px
+        display: flex
+        white-space: nowrap
+        animation: running__line-item 10s linear infinite
+
+    &__line-item   
+        
+        padding: 0 30px
+        position: relative
+        font-family: Merriweather
+        font-size: 22px
+        font-weight: 400
+        line-height: 24px
+        white-space: nowrap        
+        flex-shrink: 0
+        
+        
+
+        &::before
+            content: ""
+            position: absolute
+            width: 6px
+            height: 6px
+            border-radius: 50%
+            background: white
+            top: 40%
+            right: -9px
+            z-index: 1
+
+.header
+    margin-bottom: 80px
+
+    &__inner
+        padding-top: 26px
+        padding-bottom: 132px
+        background-image: url('./img/1920.png')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        
+    &__logo-box
+        margin-bottom: 62px
+
+    &__hero-container
+
+        max-width: 542px
+
+    &__hero-title
+        margin-bottom: 24px
+        font-family: Merriweather
+        font-size: 60px
+        font-weight: 400
+
+    &__hero-title-center
+        display: inline-block
+        text-align: center
+
+    &__hero-text
+        display: inline-block
+        margin-bottom: 40px
+        font-size: 18px
+        font-weight: 400
+        line-height: 23px
+
+    &__hero-btn-box
+        display: flex
+        column-gap: 16px
+        max-height: 72px
+
+    &__hero-btn
+        width: 263px
+        border-radius: 66px
+        padding: 15px 49px 20px 49px
+        text-align: center
+        font-size: 16px
+        font-weight: 500
+        line-height: 21px
+        &--black
+            color: #FFFFFF
+            background: #1F1F1F
+            &:hover
+                background: #FBCE51
+                color: #1F1F1F
+        &--white
+            color: #1F1F1F
+            border: 2px solid #1F1F1F
+            &:hover
+                background: #1F1F1F
+                color: #FFFFFF
+
+.attraction
+    margin-bottom: 200px
+    &__head-box
+        margin-bottom: 64px
+        display: flex
+        column-gap: 64px
+        
+        
+        
+    &__hidden
+        display: none
+
+    &__head-left
+        display: block
+        flex-basis: 764px
+        
+
+    &__heading
+        display: inline
+        font-family: Merriweather
+        font-size: 36px
+        font-weight: 400
+        line-height: 49px
+        width: 750px
+        
+        &--red
+            color: #F54932
+            font-weight: 700
+        &--body
+            margin-bottom: 60px
+
+    &__head-right
+
+    &__head-img
+        display: block
+    &__body-box
+        display: flex
+        // align-items: center
+
+    &__body-left
+        margin-right: 17px
+        flex: 0 609px
+
+    &__body-img
+        transform: translateX(-27px)
+
+    &__body-right
+        flex-direction: column
+        flex: 0 0 704px
+       
+    &__table 
+        width:100%
+        margin-top: 60px
+        margin-bottom: 48px
+        color: #313131
+        font-size: 20px
+        font-weight: 600
+        line-height: 24px
+        text-align: left
+
+    &__th 
+        padding-top: 16px
+        padding-bottom: 16px
+        padding-left: 16px
+        border-bottom: 2px solid #D0D0D0
+
+    &__th:first-child 
+        opacity: 0.7
+        width: 306px
+        font-weight: 400
+        border-right:2px solid #D0D0D0
+        padding-left: 0
+
+
+
+    &__del
+        position: relative
+        color: #000
+        text-decoration: none
+        &::before
+            content: ""
+            border-bottom: 2px solid red
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 50%
+
+    
+
+    &__link
+        font-size: 20px
+        font-weight: 400
+        line-height: 24px
+
+.stages
+    margin-bottom: 200px
+    &__head-box
+        margin-bottom: 54px
+    &__heading-box
+        max-width: 806px
+    &__heading
+        display: inline
+        font-family: Merriweather
+        font-size: 54px
+        font-weight: 400
+        line-height: 65px
+
+    &__link
+        display: inline-block
+        max-width: 280px
+        font-size: 20px
+        font-weight: 400
+        line-height: 24px
+
+    &__grid-box
+        position: relative
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(3, 1fr)
+        gap: 15px
+
+    &__child
+        display: flex
+        gap: 20px
+
+       
+    &__item
+        border: 1px solid black
+        width: 100%
+        display: flex
+        padding: 20px
+        justify-content: start
+        background: url('../icons/background.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+    &__item-number
+        padding: 12px
+        margin-right: 16px
+        width: 36px
+        height: 36px
+        background-color: #FFFFFF
+        border-radius: 50px
+        font-size: 20px
+        font-weight: 600
+        line-height: 11px
+
+    &__item-text
+
+        font-size: 20px
+        font-weight: 500
+        line-height: 24px
+    
+    &__grid-box>div:nth-of-type(1) 
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+
+    &__grid-box>div:nth-of-type(2) 
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+
+    &__grid-box>div:nth-of-type(3) 
+        grid-column: 3 / 4
+        grid-row: 1 / 3
+
+    &__grid-box>div:nth-of-type(4) 
+        grid-column: 1 / 2
+        grid-row: 2 / 3
+
+    &__grid-box>div:nth-of-type(5) 
+        grid-column: 2 / 3
+        grid-row: 2 / 3
+
+    &__grid-box>div:nth-of-type(6) 
+        grid-column: 1 / 2
+        grid-row: 3 / 4
+
+    &__grid-box>div:nth-of-type(7) 
+        grid-column: 2 / 4
+        grid-row: 3 / 4
+
+    &__grid-box>div:nth-of-type(7) p 
+        max-width: 416px
+
+    &__img
+        position: absolute
+        bottom: 0
+        right: 0
+        transform: translateX(63px)
+
+    &__swiper-box
+        display: none
+
+.members
+    margin-bottom: 140px
+    &__head
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__heading
+        margin-bottom: 60px
+        display: inline-block
+        font-family: Merriweather
+        font-size: 54px
+        font-weight: 400
+        line-height: 65px
+
+    &__wrapper
+        max-height: 524px
+
+    &__carousel
+        overflow: hidden
+        display: flex
+        flex-wrap: nowrap
+        position: relative
+        transform: translateX(0)
+        transition: all 4s ease
+
+    &__frame
+        margin-right: 10px
+        display: flex
+        flex-shrink: 0
+        flex-wrap: nowrap
+        transition: transform 2s ease    
+        
+    &__card
+        width: 394px
+        gap: 20px
+        padding-left: 37px
+        padding-right: 37px
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__avatar
+        margin-bottom: 28px
+    &__name
+        margin-bottom: 6px
+        display: inline-block
+        text-align: center
+
+    &__rank
+        margin-bottom: 20px
+        display: inline-block
+        text-align: center
+    &__link
+        display: block
+        padding: 12px
+        color: #3057A2
+        font-size: 16px
+        font-weight: 500
+        line-height: 19px
+        border: 1px solid #3057A2
+        border-radius: 62px
+        &:hover
+            background-color: #3057A2 
+            color: #FFFFFF
+
+.footer
+
+    &__inner
+        padding-top: 40px
+        background-color: #E9DED4
+        padding-bottom: 72px
+    &__copyright
+        font-size: 16px
+        font-weight: 400
+        line-height: 19px
+
+// Анимация
+@keyframes running__line-item
+    0%
+        transform: translateZ(0)
+    100%
+        transform: translate3d(-100%, 0, 0)
+
+// @keyframes move-next
+//     0%
+//         transform: translateX(-1172px)
+//     100%
+//         transform: translateX(-2344px)
+
+// .transition-next
+//     animation-name: move-next
+//     animation-duration: 3s
+
+// @keyframes move-prev
+//     0%
+//         transform: translateX(-1172px)
+//     100%
+//         transform: translateX(0px)
+
+// .transition-prev
+//     animation-name: move-prev
+//     animation-duration: 3s
+
+.transition-next
+    transform: translateX(-2344px)  // Применяем стиль конечной точки для перехода
+    transition: transform 3s ease
+
+.transition-prev
+    transform: translateX(0px)  // Применяем стиль конечной точки для перехода
+    transition: transform 3s ease
+
+
+// .transition-next
+//     left: -2344px  // Применяем стиль конечной точки для перехода
+//     transition: left 3s ease
+
+// .transition-prev
+//     left: 0px  // Применяем стиль конечной точки для перехода
+//     transition: left 3s ease
+    
+@media (min-width: 1367px)
+    .outer
+        max-width: 2560px 
+
+    .inner
+        max-width: 2560px
+        padding-left: 150.5px
+        
+
+    .running
+        &__line-container
+            max-width: 2560px
+
+
+        &__line-box
+        
+        
+            width: 2560px
+
+            transform: translateX(0)
+
+    .header
+        max-width: 2560px
+        &__inner
+            max-width: 2560px
+
+
+    .attraction
+        &__inner
+            padding-right: 72px
+        &__head-box
+            justify-content: space-between
+            column-gap: normal
+            
+
+        &__head-left
+            
+
+
+        &__body-box
+            display: flex
+            justify-content: space-between
+
+        &__body-left
+            margin-right: 17px
+            flex: 0 609px
+        
+        &__body-img
+
+            min-width: 530px
+            height: 100%
+
+        &__body-right
+            flex: 0 0 704px
+    
+    .stages
+        &__grid-box>div:nth-of-type(7) p 
+            max-width: 416px
+    .members
+        &__wrapper
+            max-height: 524px
+
+        &__frame
+            display: flex
+            justify-content: space-around
+            width: 100%
+            
+
+@media (min-width: 1567px)
+    .stages
+        &__item-text
+            &:last-child
+                max-width: 490px
+
+@media (min-width: 1767px)
+    .inner
+        padding-right: 150.5px
+    .stages
+        &__item-text
+            &:last-child
+                max-width: 690px
+
+@media (min-width: 1921px)
+    .inner
+        padding-right: 300.5px
+    
+    .attraction
+        &__inner 
+            padding-left: 300px
+            padding-right: 400px
+        &__heading
+        &__head-left
+            // flex-basis: 964px 
+        &__body-img
+            min-width: 100%
+    .stages
+        &__item-text
+            &:last-child
+                max-width: 760px
+
+@media (max-width: 1365px)
+    .outer
+        max-width: 1365px
+
+    .inner
+        max-width: 1335px
+        padding-left: 30px
+        padding-right: 30px
+    .attraction
+        margin-bottom: 50px
+
+        &__heading
+            width: 600px
+            float: inline-start
+        
+        &__head-img
+            float: right
+
+        &__body-img
+            height: 80%
+            transform: translateX(-7px)
+        &__heading--body
+            margin-bottom: 20px
+        &__body-right
+            flex: 0 0 500px
+        
+
+    
+    .stages
+        margin-bottom: 50px
+        &__grid-box>div:nth-of-type(7) p 
+            max-width: 45%
+        &__img
+            width: 35%
+            transform: translateX(23px)
+    .members
+        margin-bottom: 50px
+        &__wrapper
+            max-height: 524px
+
+        &__frame
+            display: flex
+            justify-content: space-around
+            width: 100%
+
+@media (max-width: 1080px)
+    .outer
+        max-width: 1080px
+
+    .inner
+        max-width: 1060px
+        padding-left: 30px
+        padding-right: 30px
+    .attraction
+        margin-bottom: 50px
+        &__head-left
+            display: flex
+            flex-direction: column
+            flex-basis: 100%
+            align-items: center
+        
+
+        &__heading
+            width: 100%
+            float: none
+            &--top
+                margin-bottom: 24px
+            &--bottom
+                margin-top: 24.44px
+        &__head-img
+            float: none
+            max-width: 70%
+        &__body-box
+            
+            flex-direction: column
+            align-items: center
+        &__body-left
+            align-self: auto
+            height: auto
+        &__body-img
+            height: 100%
+            transform: translateX(0)
+        &__heading--body
+            margin-bottom: 20px
+        &__body-right
+            flex: auto
+        &__table
+            margin-bottom: 28px
+
+        &__table-string
+            th, td
+                
+                padding-top: 6px
+            & th
+                width: 200px
+                padding-right: 0
+                padding-bottom: 6px
+            & td
+                padding-left: 6px
+    .stages
+   
+
+        &__item-text
+            max-width: 100%
+            font-size: 20px
+            font-weight: 500
+            line-height: 24px
+            &--last
+                max-width: 70%
+            
+        &__img
+            width: 25%
+    .members
+        &__heading
+            margin-right: 0px
+        &__avatar
+            margin-bottom: 5px
+        &__name    
+            display: inline-block
+            margin-bottom: 5px
+            height: 36.8px
+        &__rank
+            margin-bottom: 2px
+            height: 55.2px
+
+@media (max-width: 768px)
+    .outer
+        max-width: 768px
+
+    .inner
+        
+        padding-left: 10px
+        padding-right: 10px
+    .attraction
+        &__head-box
+            margin-bottom: 64px
+            flex-direction: column
+            align-items: center
+            
+
+        &__head-left
+            height: auto
+            flex-basis: 100px
+    
+    .members
+        &__heading
+            max-width: 300px
+
+        &__frame
+
+
+@media (max-width: 480px)
+    .outer
+        max-width: 480px
+
+    .inner
+        
+        padding-left: 5px
+        padding-right: 5px
+
+@media  (min-width: 374px) and (max-width: 480px)
+    .running
+        &__line-container
+            max-width: 480px
+            
+        &__line-box
+            display: flex
+            position: relative
+            width: 2335px
+            padding-top: 10px 
+            padding-bottom: 10px
+            
+         
+
+        &__line-item   
+
+            font-size: 16px
+            font-weight: 400
+            line-height: 17.6px
+            white-space: nowrap        
+
+
+    .outer
+        
+        max-width: 480px
+    .header
+        overflow: hidden
+        margin-bottom: 48px
+        position: relative
+        
+        &__running-line-box
+            position: absolute
+            bottom: 0
+        &__inner
+            min-width: 375px
+            padding-top: 18px
+            padding-bottom: 291px
+            padding-left: 20px
+            padding-right: 20px
+            background-image: url('./img/mobile.png')
+            
+        &__logo-box
+            margin-bottom: 40px
+            width: 213px
+            height: 32px
+
+        &__hero-container
+
+            max-width: none
+
+        &__hero-title
+                        
+            font-size: 36px
+        
+
+        
+
+        &__hero-text
+            
+            margin-bottom: 32px
+            
+
+        &__hero-btn-box
+            display: flex
+            flex-direction: column
+            row-gap: 14px
+            max-height: 47px
+
+        &__hero-btn
+            width: 335px
+            padding: 18px, 20px, 18px, 20px
+            line-height: 20.8px
+
+            white-space: nowrap
+            &--black
+                color: #FFFFFF
+                background: #1F1F1F
+                
+            &--white
+                color: #1F1F1F
+                background: #FFFFFF
+                border: 2px solid #1F1F1F
+                
+    .attraction
+        margin-bottom: 120px
+        &__inner
+            padding-left: 20px
+            padding-right: 20px
+
+        &__head-box
+            margin-bottom: 34px
+            display: flex
+            column-gap: 64px
+
+        &__hidden
+            display: none
+
+        &__head-left
+            flex-basis: 152px
+
+        &__heading
+            font-family: Merriweather
+            font-size: 36px
+            font-weight: 400
+            line-height: 49px
+            font-size: 28px
+            line-height: 38px
+
+
+
+            &--red
+                color: #F54932
+                font-weight: 700
+                
+            &--body
+                display: block
+                margin-bottom: 44px
+        &__head-right
+        &__head-img
+            margin-bottom: 24px
+            float: left
+        &__body-box
+            display: flex
+            // align-items: center
+
+        &__body-left
+            margin-right: 17px
+            flex: 0 auto
+
+        &__body-img
+            height: 335px
+            transform: translateX(-27px)
+
+        &__body-right
+            flex: 0 0 704px
+        &__table 
+            width: 100%
+            margin-top: 44px
+            margin-bottom: 40px
+
+
+        &__tr 
+            display: flex
+            flex-direction: column
+
+
+        &__th 
+            padding-left: 0
+            padding-top: 0
+            padding-bottom: 12px
+
+
+            &:first-child 
+                border-right: 0px
+                border-bottom: 0px
+                padding-top: 12px
+
+        &__link
+            font-size: 18px
+            
+            line-height: 21.6px
+    .stages
+        
+        margin-bottom: 120px
+        &__inner
+            max-width: 375px
+            // overflow: hidden
+        &__head-box
+            margin-bottom: 148px
+        &__heading-box
+            max-width: 335px
+        &__heading
+            display: block
+            margin-bottom: 12px
+            font-size: 36px
+            line-height: 39.6px
+
+        &__link
+            
+            max-width: 100%
+            font-size: 18px
+            font-weight: 400
+            line-height: 21.6px
+
+        &__grid-box
+            grid-template-rows: repeat(2, 150px)
+            grid-template-columns: none
+            gap: 0
+            
+
+        &__item
+            gap: 16px
+            border: none
+            max-width: 330px
+            
+            padding: 30px
+            &:nth-child(2)
+                margin-right: 150px
+            &:nth-child(3)
+                margin-right: 150px
+            &:nth-child(6)
+                margin-right: 150px
+            &:nth-child(5)
+                margin-right: 150px
+        &__item-text
+            font-size: 18px
+            line-height: 21.6pxpx
+
+        &__grid-box>div:nth-of-type(1) 
+            grid-column: 1 / 2
+            grid-row: 1 / 2
+            padding-top: 50px
+
+        &__grid-box>div:nth-of-type(2) 
+            grid-column: 1 / 2
+            grid-row: 2 / 3
+
+
+        &__grid-box>div:nth-of-type(3) 
+            grid-column: 3 / 4
+            grid-row: 1 / 3
+
+        &__grid-box>div:nth-of-type(4) 
+            grid-column: 4 / 5
+            grid-row: 1 / 2
+
+        &__grid-box>div:nth-of-type(5) 
+            grid-column: 4 / 5
+            grid-row: 2 / 3
+
+        &__grid-box>div:nth-of-type(6) 
+            grid-column: 5 / 6
+            grid-row: 1 / 3
+
+        &__grid-box>div:nth-of-type(7) 
+            grid-column: 6 / 7
+            grid-row: 1 / 3
+
+        &__img
+            position: absolute
+            top: 0
+            right: auto
+            transform: translateY(-130px)
+            width: 335px
+        &__swiper-box
+            display: block
