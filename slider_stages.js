@@ -83,6 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Показываем первую пару слайдов при загрузке страницы
+
   showSlides();
 });
