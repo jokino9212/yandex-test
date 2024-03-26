@@ -24,7 +24,6 @@ ul {
 }
 
 img {
-  max-width: 100%;
   border-style: none;
 }
 
@@ -373,10 +372,12 @@ h1 {
 .members {
   margin-bottom: 140px;
 }
-.members__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.members__inner {
+  position: relative;
+  overflow: hidden;
+}
+.members__heading-box {
+  max-width: 806px;
 }
 .members__heading {
   margin-bottom: 60px;
@@ -387,22 +388,16 @@ h1 {
   line-height: 65px;
 }
 .members__wrapper {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
   max-height: 524px;
+  width: 1222px;
 }
 .members__carousel {
-  overflow: hidden;
+  gap: 20px;
   display: flex;
-  flex-wrap: nowrap;
-  position: relative;
-  transform: translateX(0);
-  transition: all 4s ease;
-}
-.members__frame {
-  margin-right: 10px;
-  display: flex;
-  flex-shrink: 0;
-  flex-wrap: nowrap;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 .members__card {
   width: 394px;
@@ -414,6 +409,7 @@ h1 {
   align-items: center;
 }
 .members__avatar {
+  width: 320px;
   margin-bottom: 28px;
 }
 .members__name {
@@ -440,8 +436,23 @@ h1 {
   background-color: #3057A2;
   color: #FFFFFF;
 }
-.members__swiper-box--mobile {
-  display: none;
+.members__swiper-box {
+  position: absolute;
+  content: "";
+  display: flex;
+  top: 9px;
+  right: 0px;
+  height: 44px;
+  padding-right: inherit;
+  align-items: center;
+  gap: 16.5px;
+}
+.members__counter {
+  font-size: 16px;
+}
+.members__count {
+  font-size: 16px;
+  opacity: 60%;
 }
 
 .footer__inner {
@@ -473,7 +484,7 @@ h1 {
   transition: transform 3s ease;
 }
 
-@media (min-width: 1367px) {
+@media (min-width: 1366px) {
   .outer {
     max-width: 2560px;
   }
@@ -519,9 +530,6 @@ h1 {
   }
   .stages__grid-box > div:nth-of-type(7) p {
     max-width: 416px;
-  }
-  .members__wrapper {
-    max-height: 524px;
   }
   .members__frame {
     display: flex;
@@ -595,9 +603,6 @@ h1 {
   }
   .members {
     margin-bottom: 50px;
-  }
-  .members__wrapper {
-    max-height: 524px;
   }
   .members__frame {
     display: flex;
@@ -680,9 +685,6 @@ h1 {
   .stages__img {
     width: 25%;
   }
-  .members__heading {
-    margin-right: 0px;
-  }
   .members__avatar {
     margin-bottom: 5px;
   }
@@ -753,7 +755,11 @@ h1 {
     white-space: nowrap;
   }
   .outer {
-    max-width: 480px;
+    max-width: 375px;
+  }
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .header {
     overflow: hidden;
@@ -768,8 +774,6 @@ h1 {
     min-width: 375px;
     padding-top: 18px;
     padding-bottom: 291px;
-    padding-left: 20px;
-    padding-right: 20px;
     background-image: url("./img/mobile.png");
   }
   .header__logo-box {
@@ -809,10 +813,6 @@ h1 {
   }
   .attraction {
     margin-bottom: 120px;
-  }
-  .attraction__inner {
-    padding-left: 20px;
-    padding-right: 20px;
   }
   .attraction__head-box {
     margin-bottom: 34px;
@@ -881,10 +881,6 @@ h1 {
   }
   .stages {
     margin-bottom: 120px;
-  }
-  .stages__inner {
-    max-width: 375px;
-    padding-left: 20px;
   }
   .stages__head-box {
     margin-bottom: 148px;
@@ -1004,18 +1000,55 @@ h1 {
     transform: translateX(0);
     animation: slideIn 1.5s ease-out forwards;
   }
+  .members {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
   .members__heading {
     font-size: 36px;
     font-weight: 400;
     line-height: 39.6px;
+    text-transform: uppercase;
+  }
+  .members__wrapper {
+    position: relative;
+    margin-bottom: 40px;
+    width: 335px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .members__carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+  .members__card {
+    width: 100%;
+    gap: 0px;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .members__avatar {
+    display: block;
+    width: 244px;
+    margin-bottom: 28px;
   }
   .members__swiper-box {
-    display: none;
+    position: static;
+    margin: 0 auto;
+    max-width: 130px;
+    height: 36px;
+    gap: 12.5px;
+    padding-right: 0;
   }
-  .members__swiper-box--mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .footer__copyright {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
   }
 }
 @keyframes slideIn {

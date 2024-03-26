@@ -7,12 +7,14 @@
     <title>Клуб четырех коней | Тестовый лэндинг Yandex</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./styles.css" />
-    <script defer src="main.js"></script>
+    <script defer src="slider_members.js"></script>
     <script defer src="slider_stages.js"></script>
 </head>
 
 <body>
     <div class="outer">
+
+        <!-- Header -->
         <header class="header">
             <div class="inner header__inner">
                 <div class="header__logo-box">
@@ -70,7 +72,10 @@
             </div>
         </header>
 
+        <!-- Main -->
         <main>
+
+            <!-- Section Attraction -->
             <section class="attraction" id="attraction">
                 <div class="inner attraction__inner">
                     <div class="attraction__head-box">
@@ -83,7 +88,6 @@
                                 ЧТОБЫ ПОДДЕРЖАТЬ МЕЖДУНАРОДНЫЙ ВАСЮКИНСКИЙ
                                 ТУРНИР
                             </p>
-
                             <p class="attraction__heading attraction__heading--bottom">
                                 ПОСЕТИТЕ ЛЕКЦИЮ НА ТЕМУ:
                                 <span class="attraction__heading--red">«ПЛОДОТВОРНАЯ ДЕБЮТНАЯ ИДЕЯ»</span>
@@ -106,7 +110,6 @@
                                 </span>
                                 ГРОССМЕЙСТЕРА О. БЕНДЕРА
                             </p>
-
                             <table class="attraction__table">
                                 <tr class="attraction__tr">
                                     <th class="attraction__th">
@@ -153,6 +156,7 @@
                 </div>
             </section>
 
+<!-- Section Stages -->
             <section class="stages" id="stages">
                 <div class="inner stages__inner">
                     <div class="stages__head-box">
@@ -219,13 +223,12 @@
                         <img src="./icons/biplan.svg" alt="Биплан" class="stages__img" />
                     </div>
 
+                    <!-- Swiper Box -->
                     <div class="stages__swiper-box">
                         <button id="stages__swiper-arrow-left"
                             class="stages__swiper-arrow stages__swiper-arrow-left  swiper-arrow-disabled">
-                            <svg 
-                            class="swiper__arrow-hover stages__swiper-arrow"
-                            width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="swiper__arrow-hover stages__swiper-arrow" width="44" height="44"
+                                viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
                                 <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white"
                                     stroke-width="2" stroke-linecap="square" />
@@ -251,107 +254,83 @@
                         </div>
                         <button id="stages__swiper-arrow-right"
                             class="stages__swiper-arrow stages__swiper-arrow-right swiper__arrow-hover swiper-arrow-disabled">
-                            <svg 
-                            class="stages__arrow-hover stages__swiper-arrow"
-                            width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="stages__arrow-hover stages__swiper-arrow" width="44" height="44"
+                                viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="22" cy="22" r="22" fill="#313131" />
                                 <path d="M19.4618 13.5385L27.9233 22L19.4618 30.4615" stroke="white" stroke-width="2"
                                     stroke-linecap="square" />
                             </svg>
                         </button>
-
                     </div>
                 </div>
             </section>
 
+<!-- Section Members -->
             <section class="members">
                 <div class="inner members__inner">
-                    <div class="members__head">
-                        <div class="members__heading-box">
-                            <h2 class="members__heading">
-                                Участники турнира
-                            </h2>
-                        </div>
-                        <div class="members__swiper-box members__swiper-box--desktop">
-                            <svg id="members-swiper-arrow-prev"
-                                class="members__swiper-arrow members__swiper-arrow-prev swiper__arrow-hover swiper-arrow-disabled"
-                                width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
-                                <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white"
-                                    stroke-width="2" stroke-linecap="square" />
-                            </svg>
-                            <span class="members__swiper-counter">3/6</span>
-                            <svg id="members-swiper-arrow-next"
-                                class="members__swiper-arrow members__swiper-arrow-next swiper__arrow-hover swiper-arrow-disabled"
-                                width="44" height="44" viewBox="0 0 44 44" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="22" cy="22" r="22" fill="#313131" />
-                                <path d="M19.4618 13.5385L27.9233 22L19.4618 30.4615" stroke="white" stroke-width="2"
-                                    stroke-linecap="square" />
-                            </svg>
-                        </div>
+                    <div class="members__heading-box">
+                        <h2 class="members__heading">
+                            Участники турнира
+                        </h2>
                     </div>
                     <div class="members__wrapper">
-                        <div class="members__carousel" id="carousel">
-                            <div class="members__frame" id="item-active">
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Хозе-Рауль Капабланка</span>
-                                    <span class="members__rank">Чемпион мира по шахматам</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Эммануил Ласкер</span>
-                                    <span class="members__rank">Чемпион мира по шахматам</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Александр Алехин</span>
-                                    <span class="members__rank">Чемпион мира по шахматам</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
+                        <div class="members__carousel">
+                            <div class="members__card">
+                                <img src="./img/kapablanka.png" alt="Аватар участника - Хозе-Рауль Капабланка"
+                                    class="members__avatar" />
+                                <span class="members__name">Хозе-Рауль Капабланка</span>
+                                <span class="members__rank">Чемпион мира по шахматам</span>
+                                <a href="#" class="members__link">Подробнее</a>
                             </div>
-
-                            <div class="members__frame" id="item-right">
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Арон Нимцович</span>
-                                    <span class="members__rank">Чемпион мира по шахматам</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Рихард Рети</span>
-                                    <span class="members__rank">Чемпион мира по шахматам</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
-                                <div class="members__card">
-                                    <img src="./img/avatar.png" alt="Аватар участника" class="members__avatar" />
-                                    <span class="members__name">Остап Бендер</span>
-                                    <span class="members__rank">Гроссмейстер</span>
-                                    <a href="#" class="members__link">Подробнее</a>
-                                </div>
+                            <div class="members__card">
+                                <img src="./img/lasker.png" alt="Аватар участника - Эммануил Ласкер"
+                                    class="members__avatar" />
+                                <span class="members__name">Эммануил Ласкер</span>
+                                <span class="members__rank">Чемпион мира по шахматам</span>
+                                <a href="#" class="members__link">Подробнее</a>
+                            </div>
+                            <div class="members__card">
+                                <img src="./img/alexin.png" alt="Аватар участника - Александр Алехин"
+                                    class="members__avatar" />
+                                <span class="members__name">Александр Алехин</span>
+                                <span class="members__rank">Чемпион мира по шахматам</span>
+                                <a href="#" class="members__link">Подробнее</a>
+                            </div>
+                            <div class="members__card">
+                                <img src="./img/nemcovich.png" alt="Аватар участника - Арон Нимцович"
+                                    class="members__avatar" />
+                                <span class="members__name">Арон Нимцович</span>
+                                <span class="members__rank">Чемпион мира по шахматам</span>
+                                <a href="#" class="members__link">Подробнее</a>
+                            </div>
+                            <div class="members__card">
+                                <img src="./img/reti.png" alt="Аватар участника - Рихард Рети"
+                                    class="members__avatar" />
+                                <span class="members__name">Рихард Рети</span>
+                                <span class="members__rank">Чемпион мира по шахматам</span>
+                                <a href="#" class="members__link">Подробнее</a>
+                            </div>
+                            <div class="members__card">
+                                <img src="./img/bender.png" alt="Аватар участника - Остап Бендер"
+                                    class="members__avatar" />
+                                <span class="members__name">Остап Бендер</span>
+                                <span class="members__rank">Гроссмейстер</span>
+                                <a href="#" class="members__link">Подробнее</a>
                             </div>
                         </div>
                     </div>
-                    <div class="members__swiper-box members__swiper-box--mobile">
-                        <svg id="members-swiper-arrow-prev-mobile"
-                            class="members__swiper-arrow members__swiper-arrow-prev swiper__arrow-hover swiper-arrow-disabled"
-                            width="44" height="44" viewBox="0 0 44 44" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+
+<!-- Swiper Box members -->
+                    <div class="members__swiper-box">
+                        <svg class="members__swiper-arrow members__swiper-arrow-prev swiper__arrow-hover swiper-arrow-disabled"
+                            width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="22" cy="22" r="22" transform="rotate(-180 22 22)" fill="#313131" />
-                            <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white"
-                                stroke-width="2" stroke-linecap="square" />
+                            <path d="M24.5382 30.4614L16.0767 21.9999L24.5382 13.5384" stroke="white" stroke-width="2"
+                                stroke-linecap="square" />
                         </svg>
-                        <span class="members__swiper-counter">1/6</span>
-                        <svg id="members-swiper-arrow-next-mobile"
-                            class="members__swiper-arrow members__swiper-arrow-next swiper__arrow-hover swiper-arrow-disabled"
-                            width="44" height="44" viewBox="0 0 44 44" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <span class="members__counter"></span><span>/</span><span class="members__count"></span>
+                        <svg class="members__swiper-arrow members__swiper-arrow-next swiper__arrow-hover swiper-arrow-disabled"
+                            width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="22" cy="22" r="22" fill="#313131" />
                             <path d="M19.4618 13.5385L27.9233 22L19.4618 30.4615" stroke="white" stroke-width="2"
                                 stroke-linecap="square" />
@@ -360,6 +339,7 @@
                 </div>
             </section>
 
+<!-- Footer -->
             <footer class="footer">
                 <div class="footer__running-line-box running__line-container">
                     <div class="footer__running-line-box running__line-box">

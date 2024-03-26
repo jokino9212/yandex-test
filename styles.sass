@@ -22,7 +22,6 @@ ul
     list-style: none
 
 img
-    max-width: 100%
     border-style: none
 
 html
@@ -56,6 +55,7 @@ h1
             fill: #FBCE51
         &:disabled circle
             fill: #D6D6D6
+
 .running
     &__line-container
         max-width: 1366px
@@ -82,7 +82,6 @@ h1
         animation: running__line-item 10s linear infinite
 
     &__line-item   
-        
         padding: 0 30px
         position: relative
         font-family: Merriweather
@@ -91,8 +90,6 @@ h1
         line-height: 24px
         white-space: nowrap        
         flex-shrink: 0
-        
-        
 
         &::before
             content: ""
@@ -104,8 +101,6 @@ h1
             top: 40%
             right: -9px
             z-index: 1
-
-
 
 .header
     margin-bottom: 80px
@@ -122,7 +117,6 @@ h1
         margin-bottom: 62px
 
     &__hero-container
-
         max-width: 542px
 
     &__hero-title
@@ -155,12 +149,14 @@ h1
         font-size: 16px
         font-weight: 500
         line-height: 21px
+
         &--black
             color: #FFFFFF
             background: #1F1F1F
             &:hover
                 background: #FBCE51
                 color: #1F1F1F
+
         &--white
             color: #1F1F1F
             border: 2px solid #1F1F1F
@@ -170,12 +166,11 @@ h1
 
 .attraction
     margin-bottom: 200px
+
     &__head-box
         margin-bottom: 64px
         display: flex
         column-gap: 64px
-        
-        
         
     &__hidden
         display: none
@@ -183,7 +178,6 @@ h1
     &__head-left
         display: block
         flex-basis: 764px
-        
 
     &__heading
         display: inline
@@ -199,13 +193,11 @@ h1
         &--body
             margin-bottom: 60px
 
-    &__head-right
-
     &__head-img
         display: block
+
     &__body-box
         display: flex
-        // align-items: center
 
     &__body-left
         margin-right: 17px
@@ -217,7 +209,7 @@ h1
     &__body-right
         flex-direction: column
         flex: 0 0 704px
-       
+
     &__table 
         width:100%
         margin-top: 60px
@@ -241,8 +233,6 @@ h1
         border-right:2px solid #D0D0D0
         padding-left: 0
 
-
-
     &__del
         position: relative
         color: #000
@@ -256,8 +246,6 @@ h1
             width: 100%
             height: 50%
 
-    
-
     &__link
         font-size: 20px
         font-weight: 400
@@ -265,10 +253,13 @@ h1
 
 .stages
     margin-bottom: 200px
+
     &__head-box
         margin-bottom: 54px
+
     &__heading-box
         max-width: 806px
+
     &__heading
         display: inline
         font-family: Merriweather
@@ -294,7 +285,6 @@ h1
         display: flex
         gap: 20px
 
-       
     &__item
         border: 1px solid black
         width: 100%
@@ -317,7 +307,6 @@ h1
         line-height: 11px
 
     &__item-text
-
         font-size: 20px
         font-weight: 500
         line-height: 24px
@@ -364,10 +353,13 @@ h1
 
 .members
     margin-bottom: 140px
-    &__head
-        display: flex
-        justify-content: space-between
-        align-items: center
+
+    &__inner
+        position: relative
+        overflow: hidden
+
+    &__heading-box
+        max-width: 806px
 
     &__heading
         margin-bottom: 60px
@@ -378,23 +370,17 @@ h1
         line-height: 65px
 
     &__wrapper
+        margin: 0 auto
+        position: relative
+        overflow: hidden
         max-height: 524px
+        width: 1222px
 
     &__carousel
-        overflow: hidden
+        gap: 20px
         display: flex
-        flex-wrap: nowrap
-        position: relative
-        transform: translateX(0)
-        transition: all 4s ease
+        transition: transform 0.5s ease-in-out
 
-    &__frame
-        margin-right: 10px
-        display: flex
-        flex-shrink: 0
-        flex-wrap: nowrap
-        transition: transform 0.5s ease    
-        
     &__card
         width: 394px
         gap: 20px
@@ -405,7 +391,9 @@ h1
         align-items: center
 
     &__avatar
+        width: 320px
         margin-bottom: 28px
+
     &__name
         margin-bottom: 6px
         display: inline-block
@@ -415,6 +403,7 @@ h1
         margin-bottom: 20px
         display: inline-block
         text-align: center
+
     &__link
         display: block
         padding: 12px
@@ -427,8 +416,25 @@ h1
         &:hover
             background-color: #3057A2 
             color: #FFFFFF
-    &__swiper-box--mobile
-        display: none
+
+    &__swiper-box
+        position: absolute
+        content: ""
+        display: flex
+        top: 9px
+        right: 0px
+        height: 44px
+        padding-right: inherit
+        align-items: center
+        gap: 16.5px
+
+    &__counter
+        font-size: 16px
+
+    &__count 
+        font-size: 16px
+        opacity: 60%
+        
 .footer
 
     &__inner
@@ -440,14 +446,11 @@ h1
         font-weight: 400
         line-height: 19px
 
-
 @keyframes running__line-item
     0%
         transform: translateZ(0)
     100%
         transform: translate3d(-100%, 0, 0)
-
-
 
 .transition-next
     transform: translateX(-2344px)  // Применяем стиль конечной точки для перехода
@@ -458,9 +461,8 @@ h1
     transition: transform 3s ease
 
 
+@media (min-width: 1366px)
 
-    
-@media (min-width: 1367px)
     .outer
         max-width: 2560px 
 
@@ -468,24 +470,19 @@ h1
         max-width: 2560px
         padding-left: 150.5px
         
-
     .running
         &__line-container
             max-width: 2560px
 
-
         &__line-box
-        
-        
             width: 2560px
-
             transform: translateX(0)
 
     .header
         max-width: 2560px
+
         &__inner
             max-width: 2560px
-
 
     .attraction
         &__inner
@@ -493,11 +490,6 @@ h1
         &__head-box
             justify-content: space-between
             column-gap: normal
-            
-
-        &__head-left
-            
-
 
         &__body-box
             display: flex
@@ -508,7 +500,6 @@ h1
             flex: 0 609px
         
         &__body-img
-
             min-width: 530px
             height: 100%
 
@@ -516,12 +507,12 @@ h1
             flex: 0 0 704px
     
     .stages
+
         &__grid-box>div:nth-of-type(7) p 
             max-width: 416px
-    .members
-        &__wrapper
-            max-height: 524px
 
+    .members
+        
         &__frame
             display: flex
             justify-content: space-around
@@ -529,6 +520,7 @@ h1
             
 
 @media (min-width: 1567px)
+
     .stages
         &__item-text
             &:last-child
@@ -537,12 +529,14 @@ h1
 @media (min-width: 1767px)
     .inner
         padding-right: 150.5px
+
     .stages
         &__item-text
             &:last-child
                 max-width: 690px
 
 @media (min-width: 1921px)
+
     .inner
         padding-right: 300.5px
     
@@ -550,17 +544,17 @@ h1
         &__inner 
             padding-left: 300px
             padding-right: 400px
-        &__heading
-        &__head-left
-            // flex-basis: 964px 
+
         &__body-img
             min-width: 100%
+
     .stages
         &__item-text
             &:last-child
                 max-width: 760px
 
 @media (max-width: 1365px)
+
     .outer
         max-width: 1365px
 
@@ -568,6 +562,7 @@ h1
         max-width: 1335px
         padding-left: 30px
         padding-right: 30px
+
     .attraction
         margin-bottom: 50px
 
@@ -575,30 +570,28 @@ h1
             width: 600px
             float: inline-start
         
-        &__head-img
-            // float: right
-
         &__body-img
             height: 80%
             transform: translateX(-7px)
+
         &__heading--body
             margin-bottom: 20px
+
         &__body-right
             flex: 0 0 500px
         
-
-    
     .stages
         margin-bottom: 50px
+
         &__grid-box>div:nth-of-type(7) p 
             max-width: 45%
+
         &__img
             width: 35%
             transform: translateX(23px)
+
     .members
         margin-bottom: 50px
-        &__wrapper
-            max-height: 524px
 
         &__frame
             display: flex
@@ -606,6 +599,7 @@ h1
             width: 100%
 
 @media (max-width: 1080px)
+
     .outer
         max-width: 1080px
 
@@ -613,14 +607,15 @@ h1
         max-width: 1060px
         padding-left: 30px
         padding-right: 30px
+
     .attraction
         margin-bottom: 50px
+
         &__head-left
             display: flex
             flex-direction: column
             flex-basis: 100%
             align-items: center
-        
 
         &__heading
             width: 100%
@@ -629,38 +624,43 @@ h1
                 margin-bottom: 24px
             &--bottom
                 margin-top: 24.44px
+
         &__head-img
-            // float: none
             max-width: 100%
+
         &__body-box
-            
             flex-direction: column
             align-items: center
+
         &__body-left
             align-self: auto
             height: auto
+
         &__body-img
             height: 100%
             transform: translateX(0)
+
         &__heading--body
             margin-bottom: 20px
+
         &__body-right
             flex: auto
+
         &__table
             margin-bottom: 28px
 
         &__table-string
             th, td
-                
                 padding-top: 6px
+
             & th
                 width: 200px
                 padding-right: 0
                 padding-bottom: 6px
+
             & td
                 padding-left: 6px
     .stages
-   
 
         &__item-text
             max-width: 100%
@@ -672,20 +672,22 @@ h1
             
         &__img
             width: 25%
+
     .members
-        &__heading
-            margin-right: 0px
         &__avatar
             margin-bottom: 5px
+
         &__name    
             display: inline-block
             margin-bottom: 5px
             height: 36.8px
+
         &__rank
             margin-bottom: 2px
             height: 55.2px
 
 @media (max-width: 768px)
+
     .outer
         max-width: 768px
 
@@ -693,12 +695,12 @@ h1
         
         padding-left: 10px
         padding-right: 10px
+
     .attraction
         &__head-box
             margin-bottom: 64px
             flex-direction: column
             align-items: center
-            
 
         &__head-left
             height: auto
@@ -711,6 +713,7 @@ h1
 
 
 @media (max-width: 480px)
+
     .outer
         max-width: 480px
 
@@ -720,14 +723,17 @@ h1
         padding-right: 5px
 
 @media  (min-width: 374px) and (max-width: 480px)
+
     .swiper-arrow-hover
         &:hover circle
             fill: #FBCE51
         &:disabled > .stages__swiper-arrow circle
             fill: #D6D6D6
+
     .swiper-arrow-disabled
         .stages__swiper-arrow circle circle 
             fill: #D6D6D6
+
     .running
         &__line-container
             max-width: 480px
@@ -738,20 +744,20 @@ h1
             width: 2335px
             padding-top: 10px 
             padding-bottom: 10px
-            
-         
 
         &__line-item   
-
             font-size: 16px
             font-weight: 400
             line-height: 17.6px
             white-space: nowrap        
 
+    .outer   
+        max-width: 375px
 
-    .outer
-        
-        max-width: 480px
+    .inner
+        padding-left: 20px
+        padding-right: 20px
+
     .header
         overflow: hidden
         margin-bottom: 48px
@@ -760,12 +766,11 @@ h1
         &__running-line-box
             position: absolute
             bottom: 0
+
         &__inner
             min-width: 375px
             padding-top: 18px
             padding-bottom: 291px
-            padding-left: 20px
-            padding-right: 20px
             background-image: url('./img/mobile.png')
             
         &__logo-box
@@ -774,20 +779,13 @@ h1
             height: 32px
 
         &__hero-container
-
             max-width: none
 
         &__hero-title
-                        
             font-size: 36px
-        
 
-        
-
-        &__hero-text
-            
+        &__hero-text 
             margin-bottom: 32px
-            
 
         &__hero-btn-box
             display: flex
@@ -799,8 +797,8 @@ h1
             width: 335px
             padding: 18px, 20px, 18px, 20px
             line-height: 20.8px
-
             white-space: nowrap
+
             &--black
                 color: #FFFFFF
                 background: #1F1F1F
@@ -812,9 +810,6 @@ h1
                 
     .attraction
         margin-bottom: 120px
-        &__inner
-            padding-left: 20px
-            padding-right: 20px
 
         &__head-box
             margin-bottom: 34px
@@ -835,8 +830,6 @@ h1
             font-size: 28px
             line-height: 38px
 
-
-
             &--red
                 color: #F54932
                 font-weight: 700
@@ -844,13 +837,9 @@ h1
             &--body
                 display: block
                 margin-bottom: 44px
-        &__head-right
-        &__head-img
-            // margin-bottom: 24px
-            // float: left
+
         &__body-box
             display: flex
-            // align-items: center
 
         &__body-left
             margin-right: 0px
@@ -859,26 +848,23 @@ h1
         &__body-img
             height: 335px
             min-width: 375px
-            // transform: translateX(-27px)
 
         &__body-right
             flex: 0 0 704px
+
         &__table 
             width: 100%
             margin-top: 44px
             margin-bottom: 40px
 
-
         &__tr 
             display: flex
             flex-direction: column
-
 
         &__th 
             padding-left: 0
             padding-top: 0
             padding-bottom: 12px
-
 
             &:first-child 
                 border-right: 0px
@@ -887,19 +873,17 @@ h1
 
         &__link
             font-size: 18px
-            
             line-height: 21.6px
+
     .stages
-        
         margin-bottom: 120px
-        &__inner
-            max-width: 375px
-            padding-left: 20px
-            // overflow: hidden
+
         &__head-box
             margin-bottom: 148px
+
         &__heading-box
             max-width: 335px
+
         &__heading
             display: block
             margin-bottom: 12px
@@ -907,7 +891,6 @@ h1
             line-height: 39.6px
 
         &__link
-            
             max-width: 100%
             font-size: 18px
             font-weight: 400
@@ -934,23 +917,27 @@ h1
             &:nth-child(6),
             &:nth-child(5)
                 margin-right: 150px
+
         &__item-text
             font-size: 18px
             line-height: 21.6pxpx
         
             &--last
                 max-width: 100%
+
         &__grid-box>div
             padding-top: 50px
+
         &__grid-box>div:nth-of-type(1) 
             grid-column: 1 / 2
             grid-row: 1 / 2
+
         &__grid-box>div:nth-of-type(2)
             padding-top: 10px
+
         &__grid-box>div:nth-of-type(2) 
             grid-column: 1 / 2
             grid-row: 2 / 3
-
 
         &__grid-box>div:nth-of-type(3) 
             grid-column: 3 / 4
@@ -972,8 +959,10 @@ h1
         &__grid-box>div:nth-of-type(7) 
             grid-column: 1 / 7
             grid-row: 1 / 3
+
         &__grid-box>div:nth-of-type(7) p 
             max-width: 100%
+
         &__img
             position: absolute
             top: 0
@@ -981,11 +970,10 @@ h1
             transform: translateY(-137px)
             width: 335px
             z-index: 1
+
         &__swiper-box
             display: flex
-            
             align-items: center
-            
             justify-content: center
             
         &__bullets-container svg.active circle
@@ -993,6 +981,7 @@ h1
 
         &__bullets-container svg circle
             fill: #D9D9D9
+
         &__swiper-arrow
             display: block
             z-index: 2
@@ -1001,26 +990,67 @@ h1
             &:disabled
                 
                 pointer-events: none
+
                 circle
                     fill: #D6D6D6
+
     .slidevision 
         display: flex   
         transform: translateX(0)
         animation: slideIn 1.5s ease-out forwards
 
     .members
+        position: relative
+        overflow: hidden
+        margin: 0 auto
+        margin-bottom: 100px
+
         &__heading
             font-size: 36px
             font-weight: 400
             line-height: 39.6px
+            text-transform: uppercase
 
+        &__wrapper
+            position: relative
+            margin-bottom: 40px
+            width: 335px
+            margin: 0 auto
+            overflow: hidden
+
+        &__carousel
+            display: flex
+            transition: transform 0.5s ease-in-out
+            margin-bottom: 20px
+            gap: 12px
+        
+        &__card
+            width: 100%
+            gap: 0px
+            justify-content: center
+            padding-left: 40px
+            padding-right: 40px
+
+        &__avatar
+            display: block
+            width: 244px 
+            margin-bottom: 28px
 
         &__swiper-box
-            display: none
-        &__swiper-box--mobile
-            display: flex
-            align-items: center
-            justify-content: center
+            position: static
+            margin: 0 auto
+            max-width: 130px
+            height: 36px
+            gap: 12.5px
+            padding-right: 0
+            
+    .footer
+        &__copyright
+            font-size: 16px
+            font-weight: 400
+            line-height: 19.2px
+
+    
 @keyframes slideIn
   from
     opacity: 0
